@@ -10,7 +10,7 @@ public class TcpEchoServer extends BaseTcpServer {
 
     @Override
     public void onClientMessageReceived(ClientHandler client, String message) {
-        client.sendMessage(message);
+        client.sendMessage(message.toUpperCase());
         System.out.println(client.getClientName() + ": " + message);
     }
 
@@ -26,6 +26,6 @@ public class TcpEchoServer extends BaseTcpServer {
 
     @Override
     public void onListeningStarted(int port) {
-        System.out.println("Server listening on port: " + port);
+        System.out.println("ServerSide listening on port: " + port);
     }
 }

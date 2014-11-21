@@ -7,7 +7,7 @@ public class SimpleTcpClient extends BaseTcpClient {
 
     @Override
     public void onMessageServerReceived(String message) {
-        System.out.println("Server: " + message);
+        System.out.println("ServerSide: " + message);
     }
 
     @Override
