@@ -3,8 +3,11 @@ package UDP.ServerSide.Interfaces;
 import java.net.InetAddress;
 
 /**
- * Created by cccp on 21/11/2014.
+ * Created by Tommaso Garuglieri on 21/11/2014.
+ * GitHub Repository: https://github.com/GaruSchool/Socket-tcp-udp-Implementation/
+ * Contact: garuglieritommaso@gmail.com
  */
+
 public interface UdpServerInterface extends UdpMessageListener {
     public abstract void startListening(int port);
 

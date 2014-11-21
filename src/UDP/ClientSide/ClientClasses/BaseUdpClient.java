@@ -7,8 +7,11 @@ import java.io.IOException;
 import java.net.*;
 
 /**
- * Created by cccp on 21/11/2014.
+ * Created by Tommaso Garuglieri on 21/11/2014.
+ * GitHub Repository: https://github.com/GaruSchool/Socket-tcp-udp-Implementation/
+ * Contact: garuglieritommaso@gmail.com
  */
+
 public class BaseUdpClient implements UdpClientInterface {
 
     public static final int DATAGRAM_MESSAGE_SIZE = 1024;
@@ -44,11 +47,10 @@ public class BaseUdpClient implements UdpClientInterface {
 
         } catch (IOException e) {
             System.out.println("Impossibile inviare messaggio @: " + IPAddress.toString());
-            receiver.interrupt();
-            receiver = null;
-            socket.close();
+            disconnect();
         }
     }
+
 
     @Override
     public void onMessageReceived(String message, InetAddress ip, int port) {
@@ -60,8 +62,22 @@ public class BaseUdpClient implements UdpClientInterface {
     }
 
     @Override
+    public void disconnect() {
+        receiver.interrupt();
+        receiver = null;
+        socket.close();
+        onClientDisconnected();
+    }
+
+    @Override
     public void onClientMessageReceived(String message, InetAddress ip, int port) {
     }
+
+    @Override
+    public void onClientDisconnected() {
+
+    }
+
 
     public boolean isConnected() {
         return this.socket.isConnected();

@@ -9,6 +9,12 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
 
+/**
+ * Created by Tommaso Garuglieri on 21/11/2014.
+ * GitHub Repository: https://github.com/GaruSchool/Socket-tcp-udp-Implementation/
+ * Contact: garuglieritommaso@gmail.com
+ */
+
 public class BaseTcpServer implements TcpServerInterface {
 
     private ArrayList<ClientHandler> clientHandlers;

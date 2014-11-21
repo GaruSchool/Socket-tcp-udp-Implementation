@@ -7,6 +7,13 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.Socket;
 
+/**
+ * Created by Tommaso Garuglieri on 21/11/2014.
+ * GitHub Repository: https://github.com/GaruSchool/Socket-tcp-udp-Implementation/
+ * Contact: garuglieritommaso@gmail.com
+ */
+
+
 public class ClientReceiver extends Thread {
 
     public static String MESSAGE_DISCONNECTED = "#DISCONNECTED";
@@ -24,7 +31,7 @@ public class ClientReceiver extends Thread {
         try {
             BufferedReader input = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             while (!this.isInterrupted()) {
-               listener.onMessageReceived(input.readLine(), ClientMessageListener.MESSAGE_TYPE_SERVER);
+                listener.onMessageReceived(input.readLine(), ClientMessageListener.MESSAGE_TYPE_SERVER);
             }
 
         } catch (IOException e) {

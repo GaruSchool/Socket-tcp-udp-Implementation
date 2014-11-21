@@ -8,6 +8,12 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 
+/**
+ * Created by Tommaso Garuglieri on 21/11/2014.
+ * GitHub Repository: https://github.com/GaruSchool/Socket-tcp-udp-Implementation/
+ * Contact: garuglieritommaso@gmail.com
+ */
+
 public class ClientHandler extends Thread {
 
     public final static String MESSAGE_HANDLER_DISCONNECTED = "#DISCONNECTED";

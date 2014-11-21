@@ -5,8 +5,11 @@ import UDP.ClientSide.ClientImplementations.SimpleUdpClient;
 import UDP.Helpers.ConsoleHelper;
 
 /**
- * Created by cccp on 21/11/2014.
+ * Created by Tommaso Garuglieri on 21/11/2014.
+ * GitHub Repository: https://github.com/GaruSchool/Socket-tcp-udp-Implementation/
+ * Contact: garuglieritommaso@gmail.com
  */
+
 public class UdpClientTest {
 
     public static void main(String[] args) {
@@ -15,7 +18,7 @@ public class UdpClientTest {
 
         client.sendMessage("Ciao mi sono connesso");
 
-        while(client.isConnected())
+        while (client.isConnected())
             client.sendMessage(ConsoleHelper.getInput());
 
     }

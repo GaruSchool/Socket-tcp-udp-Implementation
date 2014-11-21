@@ -7,8 +7,11 @@ import java.net.InetAddress;
 import java.net.SocketException;
 
 /**
- * Created by cccp on 21/11/2014.
+ * Created by Tommaso Garuglieri on 21/11/2014.
+ * GitHub Repository: https://github.com/GaruSchool/Socket-tcp-udp-Implementation/
+ * Contact: garuglieritommaso@gmail.com
  */
+
 public class BaseUdpServer implements UdpServerInterface {
 
     public static final int DATAGRAM_MESSAGE_SIZE = 1024;
@@ -42,7 +45,7 @@ public class BaseUdpServer implements UdpServerInterface {
 
     @Override
     public void onMessageReceived(String message, InetAddress ip, int port) {
-            onClientMessageReceived(message, ip, port);
+        onClientMessageReceived(message, ip, port);
     }
 
     @Override
